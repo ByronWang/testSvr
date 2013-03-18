@@ -1,0 +1,1 @@
+sudo /opt/jdk1.8.0/bin/java -cp .:lib/* http.startup.JettyServer

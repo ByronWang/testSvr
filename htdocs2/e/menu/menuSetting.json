@@ -1,0 +1,13 @@
+[
+	{	"label"	:	"Quick",
+		"items"	:	[
+			{        "href": "#/d/Person/wangshilian",        "label": "Person"}
+		]
+	},
+	{	"label"	:	"Types",
+		"items"	:	[
+			{        "href": "#/d/Person/",        "label": "Person"},
+			{        "href": "#/d/Company/",        "label": "Company"}
+		]
+	}
+]
