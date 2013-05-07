@@ -1,80 +1,115 @@
 /* app css stylesheet */
-
-html{
+html {
 	overflow-y: scroll;
+	overflow-x: hidden;
 }
+
+table {
+	table-layout: fixed;
+	overflow: hidden;
+}
+
+.widget-title .buttons {
+	float: right;
+	margin: 6px 10px 0 0;
+}
+
+.widget-title input.search-query {
+	padding-right: 12px;
+	padding-right: 12px 9;
+	padding-left: 12px;
+	padding-left: 12px 9;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-bottom: 0;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	border-radius: 16px;
+	height: 20px;
+	margin-right: 1em;
+}
+
+#sidebar>ul>li>ul>li>a>i {
+	margin-right: 10px;
+}
+
+.container-fluid .row-fluid:first-child {
+	margin-top: 5px;
+}
+
+[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak
+	{
+	display: none;
+}
+
+#content article>header {
+	min-height: 50px;
+	padding-top: 1px;
+}
+#content article>header h1,#content article>header .btn-toolbar {
+	margin-top: 10px;
+}
+#content article>header .btn-toolbar {
+	margin-top: -40px;
+}
+
+
+#breadcrumb a {
+	padding: 6px 20px 6px 10px;
+}
+
+form.form-horizontal input.ng-valid.ng-dirty {
+	background-color: #78FA89;
+}
+.form-horizontal table tr.newLine input[type=text], .form-horizontal  table tr.newLine input[type=password], .form-horizontal  table tr.newLine textarea {
+	width: 90% !important;
+}
+.form-horizontal table tr.newLine .input-append {
+	width: 90% !important;
+}
+.form-horizontal table tr.newLine .input-append input{
+	width: 70% !important;
+}
+
 /*
-body {
-	background: url('../img/page-bg.png') repeat center top;
+input.inlinePopup{
+	cursor: pointer;
 }
-*/
+a.inlinePopup{
+	position: absolute;
+	right: 0px;
+}*/
 
-.well{
-	/*background-color: #e3e3e3;*/
-}
+/*
+.form-horizontal table tr.newLine input[type=text][x-popup] {
+	width: 40% !important;
+}*/
 
-.table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
-	background-color: #ededed;
-}
+/*input[required]{
+	background-color: red;
+}*/
 
 
-
-[class^="icon2-"],
-[class*=" icon2-"] {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  *margin-right: .3em;
-  line-height: 20px;
-  vertical-align: text-top;
-  background-image: url("../img/hpc3.png");
-  background-position: 20px 20px;
-  background-repeat: no-repeat;
-}
-
-[class^="icon2-"]:last-child,
-[class*=" icon2-"]:last-child {
-  *margin-left: 0;
-}
-
-.icon2-preferences {
-	background-position: -71px -108px;
-}
-
-.icon2-preferences:hover {
-	background-position: -49px -108px;
-}
-
-a:hover .icon2-preferences {
-	background-position: -49px -108px;
+.modal-header .ctrls {
+position: absolute;
+right: 40px;
+top: 6px;
 }
 
 
-[class^="icon18-"],
-[class*=" icon18-"] {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  *margin-right: .3em;
-  line-height: 20px;
-  vertical-align: text-top;
-  background-image: url("../img/hpc3.png");
-  background-position: 18px 18px;
-  background-repeat: no-repeat;
+#sidebar > ul > li.section {
+	text-transform: uppercase;
+	padding: 4px 0 4px 8px;
+	color: #5a5a5a;
+	font-size: 11px;
+	font-weight: 800;
+	text-shadow: 0 1px 0 #000;
 }
-
-[class^="icon18-"]:last-child,
-[class*=" icon18-"]:last-child {
-  *margin-left: 0;
+#sidebar > ul > li > a {
+	padding: 4px 0 4px 8px;
+	display: block;
+	color: #AAAAAA;
 }
-.icon18-development{
- 	background-image: url("../img/hammer.png");
-	background-position: 0px 0px;
+#sidebar > ul > li > a > i {
+	margin-right: 4px;
 }
-
-.icon18-setting{
- 	background-image: url("../img/gear.png");
-	background-position: 0px 0px;
-}
-
-
