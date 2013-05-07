@@ -1,0 +1,8 @@
+----------------------------------------------------------------
+2013-03-19 07:11:27.589 GMT:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instance a816c00e-013d-817d-067a-000000f390f0 
+on database directory D:\Temp\testJetty\db\nebula  with class loader sun.misc.Launcher$AppClassLoader@d76d51 
+Loaded from file:/D:/Temp/testJetty/lib/derby-10.6.2.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0-b147
+Database Class Loader started - derby.database.classpath=''
