@@ -2,7 +2,7 @@
 
 [#macro inputBox field id ngModel placeholder key=false required=true readonly=false ex=""]
 	[#assign optType][@compress single_line=true]
-		[#switch field.attrs.formatType!"text"]
+		[#switch field.attrs.FormatType!"text"]
 			[#case "text"]		type="text"		[#break]
 			[#case "numeric"]	type="number"	[#break]
 			[#case "email"]		type="email"	[#break]
@@ -12,10 +12,10 @@
 	
 	[#assign optReadonly][#if key] x-ng-readonly ="update" [#elseif readonly]readonly[/#if][/#assign]
 	[#assign optValidateRule][@compress single_line=true]
-			[#if field.attrs.min??		] min		="${field.attrs.min}" 			[/#if]
-			[#if field.attrs.max??		] max		="${field.attrs.max}" 			[/#if]
-			[#if field.attrs.minLength??] minLength	="${field.attrs.minLength}" [/#if]
-			[#if field.attrs.maxLength??] maxLength	="${field.attrs.maxLength}" [/#if]
+			[#if field.attrs.Min??		] min		="${field.attrs.Min}" 			[/#if]
+			[#if field.attrs.Max??		] max		="${field.attrs.Max}" 			[/#if]
+			[#if field.attrs.MinLength??] minLength	="${field.attrs.MinLength}" [/#if]
+			[#if field.attrs.MaxLength??] maxLength	="${field.attrs.MaxLength}" [/#if]
 	[/@compress][/#assign]
 	[#assign optRequired][#if required] required[/#if][/#assign]
 
@@ -24,12 +24,12 @@
 			[#list (attrs[field.name].Values)![] as attr],{name:'${attr.Name}'}[/#list]
 		[/@compress] [/#assign]
 		
-		<select id="${id}" x-ng-init="values = [${attrValues?substring(1)}];"  ${ex}
+		<select id="${id}" x-ng-init="${id}values = [${attrValues?substring(1)}];"  ${ex}
 				${optReadonly} ${optRequired}  ${optValidateRule} 
-				x-ng-model="${ngModel}" x-ng-options="c.name as c.name for c in values" placeholder="${placeholder}">	
+				x-ng-model="${ngModel}" x-ng-options="c.name as c.name for c in ${id}values" placeholder="${placeholder}">	
 			<option value="">-- 选择 ${field.name} --</option>
 		</select>
-	[#elseif field.attrs.formatType! = "textarea"]
+	[#elseif field.attrs.FormatType! = "textarea"]
 		<textarea id="${id}"  x-ng-model="${ngModel}" placeholder="${placeholder}"  ${ex}
 			${optReadonly} ${optRequired}  ${optValidateRule} 
 			></textarea>		
